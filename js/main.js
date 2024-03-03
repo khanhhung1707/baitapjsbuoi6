@@ -23,8 +23,8 @@ document.querySelector("#inSoNguyenNhoNhat").onclick = function(){
 
 //bài2
 function tinhTong() {
-    const x = +document.getElementById('x').value;
-    const n = +document.getElementById('n').value;
+    var x = +document.getElementById('x').value;
+    var n = +document.getElementById('n').value;
 
     var sum = 0;
 
@@ -36,4 +36,25 @@ function tinhTong() {
 }
 document.querySelector("#tinhTong").onclick = function(){
     tinhTong();
+}
+
+//bài3
+function tinhGiaiThua() {
+    var n = parseInt(document.getElementById('numberGiaiThua').value);
+
+    if ( n < 0) {
+        alert("Vui lòng nhập n là số nguyên không âm");
+        return;
+    }
+
+    var giaiThua = 1;
+
+    for (var i = 1; i <= n; i++) {
+        giaiThua *= i;
+    }
+
+    document.querySelector(".result__bai3").innerHTML = `Giai thừa của ${n} là: ${giaiThua}`;
+}
+document.querySelector("#tinhGiaiThua").onclick = function(){
+    tinhGiaiThua();
 }
