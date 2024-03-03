@@ -86,3 +86,21 @@ function inTheDiv() {
 document.querySelector("#inTheDiv").onclick = function(){
     inTheDiv();
 }
+
+//bài5
+function inSoNguyen() {
+    var inputNumber = document.getElementById('inputNumber').value;
+    var number1 =" ";
+    if (isNaN(inputNumber) || inputNumber === '') {
+        alert("Hãy nhập vào số");
+        return;
+    }
+
+    for (var i = 1; i <= inputNumber; i++) {
+        number1 += i + " ";
+    }
+    document.querySelector(".result__bai5").innerHTML = `Các số: ${number1}`;
+}
+document.querySelector("#inSoNguyen").onclick = function(){
+    inSoNguyen();
+}
