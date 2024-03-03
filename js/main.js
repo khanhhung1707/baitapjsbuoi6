@@ -58,3 +58,31 @@ function tinhGiaiThua() {
 document.querySelector("#tinhGiaiThua").onclick = function(){
     tinhGiaiThua();
 }
+
+//bài4
+function inTheDiv() {
+    var theDiv = document.createElement('div');
+    theDiv.id = 'bai4';
+
+    for (var i = 1; i <= 10; i++) {
+        var div = document.createElement('div');
+        div.className = 'container p-2';
+
+
+        if (i % 2 === 0) {
+            div.style.backgroundColor = 'red';
+            div.style.color = "white"
+        } else {
+            div.style.backgroundColor = 'blue';
+            div.style.color = "white"
+        }
+
+        div.textContent = i;
+        theDiv.appendChild(div);
+    }
+
+    document.querySelector(".result__bai4").appendChild(theDiv);
+}
+document.querySelector("#inTheDiv").onclick = function(){
+    inTheDiv();
+}
